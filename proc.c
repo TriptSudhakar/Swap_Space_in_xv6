@@ -112,7 +112,7 @@ found:
   memset(p->context, 0, sizeof *p->context);
   p->context->eip = (uint)forkret;
 
-  p->rss = 0;
+  p->rss = PGSIZE;
   return p;
 }
 
@@ -444,6 +444,7 @@ forkret(void)
     first = 0;
     iinit(ROOTDEV);
     initlog(ROOTDEV);
+    swapinit();      // swap table initialization
   }
 
   // Return to "caller", actually trapret (see allocproc).
