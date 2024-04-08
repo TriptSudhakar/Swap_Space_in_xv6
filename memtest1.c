@@ -34,8 +34,8 @@ mem(void)
 			goto failed;
 		*(char**)m1 = m2;
 		((int*)m1)[2] = count++;
-		printf(1,"%d\n",sizeof(int));
-		printf(1, "CurrCount: %d\n", ((int*)m1)[2]);
+		// printf(1,"%d\n",sizeof(int));
+		// printf(1, "CurrCount: %d\n", ((int*)m1)[2]);
 		m1 = m2;
 		cur += 4096;
 	}

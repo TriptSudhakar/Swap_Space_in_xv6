@@ -12,4 +12,4 @@
 #define NBUF         (MAXOPBLOCKS*3)  // size of disk block cache
 #define FSSIZE       3500  // size of file system in blocks
 #define NSWAPSLOTS   300  // size of swap table
-
+#define PTE_SW       0x008   // Swapped
